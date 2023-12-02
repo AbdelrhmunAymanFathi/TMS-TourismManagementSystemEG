@@ -1,0 +1,91 @@
+
+
+body
+{
+    background-image: url(./imgs/Egypt\ Cairo\ Oleh_Slobodeniuk\ GettyImages-1306141437.jpg);
+    height: 100%;
+    font-family: Poppins;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    /* display: flex; */
+
+}
+.container1{
+    max-width: 500px;
+    margin:1.4% auto ;
+    padding:50px;   
+    background-color: rgb(255 255 255 / 83%);
+    border: 1px solid #E6BE8A;
+    border-radius: 25px;
+
+
+
+}
+
+/* .container0 
+{
+    display: none;
+} */
+.alert-danger {
+    display: table-header-group;
+}
+
+.container2{
+    max-width: 600px;
+    margin:9% auto ;
+    padding:50px;   
+    background-color: rgb(255 255 255 / 71%);
+    border: 1px solid #E6BE8A;
+    border-radius: 25px;
+
+
+}
+
+.form-group{
+    margin-bottom:30px;
+    border-radius: 10px;
+}
+
+
+.form-control
+{
+    background-color: #F2F7FF;
+    border: 1px solid #E6BE8A;
+}
+
+.linkes
+{
+    color:#E6BE8A;
+}
+
+.colorLinkGr
+{
+    color: var(--general-color, #6A6A6A);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 5%;
+}
+
+.logo
+{
+width: 40%;
+margin-top: 1%;
+}
+
+@media screen and (max-width: 600px) {
+   body{
+    background-image: url(./imgs/takethree.jpg);
+    background-size:230%;
+   }
+   .container1
+   {
+    border: none;
+    border-radius: 0%;
+   }
+
+}
