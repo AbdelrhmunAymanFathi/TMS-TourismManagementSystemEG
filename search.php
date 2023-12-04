@@ -22,6 +22,7 @@ include 'database.php'
             <button class="btn btn-dark btn-sm" name="submit">search</button>
             <div class="contianer my-5">
                 <table class="table">
+                    
                     <?php
                 if(isset($_POST['submit']))
                 {
