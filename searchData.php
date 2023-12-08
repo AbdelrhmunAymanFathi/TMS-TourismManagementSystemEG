@@ -30,7 +30,7 @@ include 'database.php';
                 <p class="lead text-center text-danger">Your email id is :  '.$row['email'].' </p>
                     <hr class="my-4">
     
-                <p class="lead">
+                    <p class="lead">
                 <a class="btn btn-primary btn-lg" href="search.php" role="button">Back</a>
                 </p>
             </div>

@@ -8,7 +8,7 @@ if (!isset($_SESSION["user"])) {
 <?php
 
 include('database.php');
-$query = "select * from travels";
+$query = "select * from travels ORDER BY RAND() LIMIT 6;";
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -28,7 +28,7 @@ $result = mysqli_query($conn, $query);
     <title>Tourism Management System</title>
 </head>
 
-<body>
+<body> 
     <nav class="navbar navbar-expand-sm" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html" id="logo"><span>T</span>ravel</a>
@@ -39,7 +39,7 @@ $result = mysqli_query($conn, $query);
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#book">Book</a>
@@ -93,7 +93,7 @@ $result = mysqli_query($conn, $query);
     <section class="book" id="book">
         <div class="container">
             <div class="main-text">
-                <h1>B<span>ook</span></h1>
+                <h1>S<span>earch</span> F<span>or</span> T<span>rips</span></h1>
             </div>
             <div class="row">
                 <div class="col-md-6 py-3 py-md-0">
@@ -102,13 +102,13 @@ $result = mysqli_query($conn, $query);
                     </div>
                 </div>
                 <div class="col-md-6 py-3 py-md-0">
-                    <form action="#">
-                        <input type="text" class="form-control" placeholder="Where To" required><br>
-                        <input type="text" class="form-control" placeholder="How Many" required><br>
-                        <input type="date" class="form-control" placeholder="Arrivals" required><br>
-                        <input type="date" class="form-control" placeholder="Leaving" required><br>
-                        <textarea rows="10" class="form-control" name="text" placeholder="Enter Your Name & Details"></textarea><br>
-                        <button type="submit" class="btn btn-primary"> Book Now</button>
+                    <form action="packeges.php">
+                        <input type="text" class="form-control" placeholder="Where To" method="post" name="search" required><br><br>
+                        <!-- <input type="text" class="form-control" placeholder="How Many" ><br>
+                        <input type="date" class="form-control" placeholder="Arrivals" ><br>
+                        <input type="date" class="form-control" placeholder="Leaving" ><br>
+                        <textarea rows="10" class="form-control" name="text" placeholder="Enter Your Name & Details"></textarea><br> -->
+                        <a href="packeges.php?data = <?php echo $row['search']; ?>" type="submit" class="btn btn-primary"> Search For Trip</a>
                     </form>
                 </div>
             </div>
@@ -238,22 +238,22 @@ $result = mysqli_query($conn, $query);
     <section class="gallary" id="gallary">
         <div class="container">
             <div class="main-text">
-                <h1><span>G</span>allary</h1>
+                <a href="gallary.php" style="color:black; text-decoration:none;"><h1><span>G</span>allary</h1></a>
             </div>
             <div class="row" style="margin-top: 30px;">
                 <div class="col-md-4 py-3 py-md-0">
                     <div class="card">
-                        <img src="./images/B.jpg" alt="" height="280px">
+                        <img src="./images/360_F_561090988_fHHhcnYRBUeI2ddSoWuQKAhKBWMcDAI6.jpg" alt="" height="280px">
                     </div>
                 </div>
                 <div class="col-md-4 py-3 py-md-0">
                     <div class="card">
-                        <img src="./images/pexels-kai-pilger-1734907.jpg" alt="p">
+                        <img src="./images/1pyramids-1551361995.jpg" alt="p" height="280px">
                     </div>
                 </div>
                 <div class="col-md-4 py-3 py-md-0">
                     <div class="card">
-                        <img src="./images/pexels-michał-ludwiczak-1239162.jpg" alt="p">
+                        <img src="./images/9913289da639195622b641d316ef69a3.jpg" alt="p" height="280px">
                     </div>
                 </div>
             </div>
@@ -286,17 +286,16 @@ $result = mysqli_query($conn, $query);
 
     <!-- footer -->
 
-    <div class="footer">
+    <div class="footer mt-5">
 
         <div class="row" id="box-container">
 
             <div class="col-lg-3 col-md-6 col-sm-6" id="box">
                 <h3>links</h3>
-                <a href="#home">home</a>
-                <a href="#book">about</a>
-                <a href="#packeges">packages</a>
-                <a href="#services">products</a>
-                <a href="#gallary">team</a>
+                <a href="index.php">home</a>
+                <a href="index.php">about</a>
+                <a href="index.php">packages</a>
+                <a href="#gallary">gallary</a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6" id="box">
                 <h3>locations</h3>
