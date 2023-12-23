@@ -4,6 +4,8 @@ if (isset($_SESSION["user"])) {
     header("Location: index.php");
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +45,7 @@ if (isset($_SESSION["user"])) {
                 array_push($errors, "Email is not valid");
             }
 
-            if (strlen($password)<8) 
+            if (strlen($password) < 8) 
             {
                 array_push($errors,"Password must be at least 8 charactes long");
             }

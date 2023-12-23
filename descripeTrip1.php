@@ -107,13 +107,15 @@ include 'database.php';
         <div class="col-lg-4 col-md-4 col-sm-12 formdetails">
             <div class="main-text css-text">
             <h1><span>B</span>ooking Form</h1>
+            <h3>Price : ' . $row['price'] . ' $</h3>
             </div>
 
             <form action="#">
-            <input type="text" class="form-control"placeholder="How Many" required><br>
-            <input type="date" class="form-control"placeholder="Travel Date" required><br>
-            <input type="date" class="form-control"placeholder="Leaving" required><br>
-            <button type="submit" class="btn btn-primary"> Book Now</button>
+            <input type="text" class="form-control"placeholder="How Many Person ?" required><br>
+            <label> <h5> Start Travel Date </h5> </label>
+            <input type="date" class="form-control"placeholder="Start Travel Date" required><br>
+            
+            <a class="btn btn-success" href="book.php">Book Now</a>
             </form>
         </div>
     </div>

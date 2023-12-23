@@ -26,6 +26,10 @@ $result = mysqli_query($conn, $query);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@500&family=Saira:wght@700&display=swap" rel="stylesheet">
     <title>Tourism Management System</title>
+    <style> 
+
+    
+    </style>
 </head>
 
 <body> 
@@ -108,7 +112,7 @@ $result = mysqli_query($conn, $query);
                         <input type="date" class="form-control" placeholder="Arrivals" ><br>
                         <input type="date" class="form-control" placeholder="Leaving" ><br>
                         <textarea rows="10" class="form-control" name="text" placeholder="Enter Your Name & Details"></textarea><br> -->
-                        <a href="packeges.php?data = <?php echo $row['search']; ?>" type="submit" class="btn btn-primary"> Search For Trip</a>
+                        <a href="packeges.php?data = <?php echo $row['search']; ?>" type="submit" class="btn btn-primary d-none"> Search For Trip</a>
                     </form>
                 </div>
             </div>
@@ -257,7 +261,12 @@ $result = mysqli_query($conn, $query);
                     </div>
                 </div>
             </div>
+
+           
+       
         </div>
+
+        
 
     </section>
 
